@@ -34,6 +34,12 @@ h4 {
 	margin-left: 5px;
 	margin-bottom: 15px;
 	font-family: Verdana, sans-serif;
+	color: #ff00ff;
+}
+
+h1 {
+	text-align: center;
+	font-family: Optima, sans-serif;
 }
 
 .right p {

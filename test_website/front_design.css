@@ -71,7 +71,8 @@ h1 {
 }
 
 .buttons {
-	text-align: center;
+	margin-right: 50%;
+	margin-left: 50%;
 	position: absolute;
 	bottom: 0;
 }

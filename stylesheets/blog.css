@@ -8,7 +8,13 @@ html {
   font-weight: bold;
   border: 2px solid black;
   top: 0;
+  border-radius: 10px;
+  padding: 2px;
 
+}
+
+#home-link a {
+  color: #C5CBFF;
 }
 
 header {
@@ -47,4 +53,13 @@ main {
 
 footer p {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #7886FF;
+}
+
+a:hover{
+  color: black;
 }

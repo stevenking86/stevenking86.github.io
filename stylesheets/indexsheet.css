@@ -25,6 +25,10 @@ nav {
   font-weight: bold;
 }
 
+nav a {
+  color: #C5CBFF;
+}
+
 nav a:hover{
   color: black;
 }
@@ -35,6 +39,10 @@ nav li {
   margin-right:4em;
   padding: 3px 5px 3px 5px;
   border: 2px solid black;
+  border-radius: 10px;
+}
+
+nav ul {
 }
 
 #pic img {
@@ -51,6 +59,10 @@ main {
   margin-left: 2em;
   margin-bottom: 5em;
   vertical-align: top;
+}
+
+main a {
+  color: #7886FF;
 }
 
 main a:hover{
@@ -72,4 +84,8 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
 }

@@ -3,7 +3,7 @@ html {
 }
 
 #home-link {
-  position:fixed;
+  position:absolute;
   left: 0;
   font-weight: bold;
   border: 2px solid black;

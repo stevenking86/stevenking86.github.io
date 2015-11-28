@@ -17,6 +17,17 @@ html {
   color: #C5CBFF;
 }
 
+.center {
+  margin: auto;
+  display:block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.spacer {
+  margin-top: 5em;
+}
+
 header {
   position: relative;
   margin-top: 4em;

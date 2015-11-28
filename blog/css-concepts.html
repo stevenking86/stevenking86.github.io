@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elements From the Inside Out</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+<body>
+  <p id="home-link">
+    <a href="http://stevenking86.github.io/blog/index.html">Blog Home</a>
+  <header>
+  <h1>Elements From the Inside Out</h1>
+  <h2>Understanding Margin, Border, and Padding </h2>
+  <h4>11/28/2014</h4>
+</header>
+
+  <main>
+    <p>
+       I was excited to dive into CSS. I thought, I'd be making my websites look professional in no time once I just dove in. Turns out there's an enormous pile of ideas packed into 'CSS' and even small pieces of it can be tricky to understand. Today, I'll try to unravel the mysteries of margin, border, and padding.
+    </p>
+    <p>
+      I hope this blog post can explain a small part of CSS positioning, having to do with the space around an element. To start, take a look at this image:
+    </p>
+      <p><img class="center" alt="box-model" src="boxdim.gif"/></p>
+    <p>
+      That's the image I use when this things gets fuzzy in my head and it honestly does a great job explaining what's going on. The only part that requires some imagination is what your element actually is. In this case, let's picture it as a word. </p>
+    <p>The space between the word and any border is called the padding. If the padding size is increased, the border will get further and further away. Here's an image of our word with a simple border around it and no padding at all.
+      <img alt="plain" class="center" src="word-plain.png"/>
+    </p>
+    <p>Now, in my CSS document I will increase the padding to 40px. You can see the code and results here:</p>
+    <p><img alt="padding40code" class="center" src="padding40.png"/></p>
+    <p><img alt="padding40img" class="center" src="word-padding.png"/></p>
+    <p>
+      The border itself is easy to understand. It's basically a line or dotted line that goes around your element. One can play with the thickness and whether or not the border actually goes all the way around or any number of other attributes of the border. We've been using a one pixel solid black border so far. Let's see what happens when we change it a couple of different ways.
+    </p>
+     <p> Here's the code and image for a 30 pixel solid purple border.</p>
+     <p><img alt="purple code" class="center" src="purple-code.png"/></p>
+     <p><img alt="purple img" class="center" src="purple.png"/></p>
+     <p>Here's the code and image for a 15 pixel dotted green border.</p>
+     <p><img alt="green code" class="center" src="green-code.png"/></p>
+     <p><img alt="green img" class="center" src="green.png"/></p>
+    <p>
+      The margin is the space between an element and another element. Or it could be the space between an element and the side of the browser. It's used to push your element away from other things.
+    </p>
+    <p> To illustrate this, I've created another element. It's the word "wall" with a nice big wall next to it. I've put it right next to our element. (I saved our dotted green border. It's a nice look.)</p>
+    <p><img alt="wall" class="center" src="wall.png"/></p>
+    <p>Now watch what happens when I increase the left margin of our "word" element. "Word" will move 40px away from the wall.</p>
+    <p><img alt="margin code" class="center" src="margin-code.png"/></p>
+    <p><img alt="wall push" class="center" src="wall-push.png"/></p>
+
+    <p> There are many other things margin, border, and padding can do but I hope I've helped illustrate the basics. When in doubt always refer to the cheat sheet image at the top of this page! If you want to dive in further, <a href="http://www.w3schools.com/css/">W3 Schools</a> is a great resource.
+    </p>
+
+  </main>
+  <footer>
+    <p>contact: stevenking86@gmail.com</p>
+  </footer>
+
+</body>
+</html>

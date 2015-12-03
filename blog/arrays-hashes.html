@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays and Hashes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+<body>
+  <p id="home-link">
+    <a href="http://stevenking86.github.io/blog/index.html">Blog Home</a>
+  <header>
+  <h1>Hashes and Arrays</h1>
+  <h2>An Intro to the World of Collection and Container Objects</h2>
+  <h4>12/03/15</h4>
+</header>
+
+  <main>
+    <p>
+      It's week four of DBC and we're back into the world of ruby. I haven't really focused on it for the past few weeks and wow is it easy to forget things! It was nice to do the exercises this week and to review some things that had slipped my mind. One thing that had become fuzzy was the idea of these "container objects"(term taken from The Well Grounded Rubyist book on this topic.) By "container objects" I'm referring specifically to arrays and hashes.
+    </p>
+    <p>
+      The simplest way to define an array is to say that it's a list. This is a great way to start thinking about arrays. Here's how we make one:
+    </p>
+    <p><pre><code>my_array = [1,2,3]</code></pre></p>
+    <p>But that's not the only type of array. Check these out:
+    </p>
+    <p><pre><code>
+my_float_array = [2.5, 6.777, 9.321]
+my_string_array = ["hello", "Bill Clinton", "Let there be light"]
+my_boolean_array = [true, false, true]
+my_array_array = [[1,2],[3,4,5],[56]]
+my_fantastic_array = ["Steven", 234, true, 6.5, "yes yes yes", [45, 54], ["Welcome!", 32, false]]</code></pre></p>
+    <p> Accessing an item in an array is simple. Simply use the name of the array and its position. It's important to know that with arrays, the first item in the array is actually in the "0" position. I'll use the first example above to illustrate this and a few other simple array methods.
+      <pre><code>
+my_array = [1,2,3]
+puts my_array[0]
+=> 1
+puts my_array[1]
+=> 2
+puts my_array.last
+=> 3
+puts my_array.length
+=> 3</code></pre></p>
+    <p>What if instead of numbers, we had an array of strings. Let's take a look at this array of books.</p>
+<pre><code>
+my_books = ["To Kill a Mockingbird ", "Fight Club", "Fifty Shades of Grey", "Les Miserables", "Grapes of Wrath", "Catch 22"]</code></pre>
+    <p>Let's clean up our bookshelf. Ruby gives us a really easy method to alphabetize our books:</p>
+<pre><code>
+my_books.sort
+=> ["Catch 22", "Fifty Shades of Grey", "Fight Club", "Grapes of Wrath", "Les Miserables", "To Kill a Mockingbird "]
+</code></pre>
+    <p>Nice, right? Now we could've called the .sort method on an array of numbers as well. It would've put them in numerical order from lowest to highest. Very handy!</p>
+    <p>But what if instead of just a list of books, we had the books and how many pages they had? Or perhaps the books and their authors? An array doesn't seem like the right tool for the job anymore. It's time to get into hashes!</p>
+    <p>If an array is like a list, a hash is like a dictionairy. Hashes are made up of key/value pairs. This could be a word and its definition, a person and their age, or any number of other things. Where arrays are found in between square brackets, hashes are put between curly braces. Let's make a hash of some of our books and how many pages they have:</p>
+<pre><code>
+books_hash = {"Catch 22"=>365,
+"Fifty Shades of Grey"=> 245,
+"Fight Club"=> 432,
+"Grapes of Wrath"=>875}
+</code></pre>
+    <p>Once the hash is set up, we can access the values by referring to the key. If, for example, you wanted to know how many pages were in Grapes of Wrath, you could do:</p>
+<pre><code>
+books_hash["Grapes of Wrath"]
+=> 875
+</code></pre>
+    <p>Excellent! Perhaps, it's been a while and we've forgotten which books we even have on file. We could do:</p>
+<pre><code>
+books_hash.keys
+=> ["Catch 22", "Fifty Shades of Grey", "Fight Club", "Grapes of Wrath"]
+</code></pre>
+    <p>So there are a few of the very basic things that can be done with arrays and hashes. There are many more methods and many many more uses for each. I hope you enjoyed my intro to arrays and hashes!</p>
+  </main>
+  <footer>
+    <p>contact: stevenking86@gmail.com</p>
+  </footer>
+
+</body>
+
+</html>

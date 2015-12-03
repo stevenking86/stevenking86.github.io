@@ -74,3 +74,9 @@ a {
 a:hover{
   color: black;
 }
+
+code {
+  font-family: Courier, 'New Courier';
+  background-color: black;
+  color: green;
+}

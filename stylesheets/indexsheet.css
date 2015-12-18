@@ -60,6 +60,10 @@ main {
   vertical-align: top;
 }
 
+.about {
+  width:90%;
+}
+
 main a {
   color: #7886FF;
 }

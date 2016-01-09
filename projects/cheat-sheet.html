@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>:>git cheat</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/cheat.css">
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Raleway' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <p id ="headline">:>git cheat</p>
+    <p id="created">:>created by <a href="http://stevenking86.github.io">steven king</a></p>
+  </header>
+<main>
+  <nav>
+  <p> Welcome to my git cheat sheet. This website is meant to be used with the index below or by using 'find' to find what you're looking for. Happy coding! </p>
+  <p class="bolder">Index:</p>
+  <p> <a href="#checkout">checkout, branch</a></p>
+  <p> <a href="#add">add, commit, diff</a></p>
+  <p> <a href="#clone">clone,init</a></p>
+  <p> <a href="#status">status, log</a> </p>
+  <p> <a href="#head">HEAD</a> </p>
+  <p> <a href="#reset">reset</a> </p>
+  <p> <a href="#remote">remote, fetch, push, merge</a></p>
+  <p> <a href="#summary">summarized basic workflow</a> </p>
+</nav>
+ <p class="bolder"><a name="checkout"></a>checkout, branch</p>
+<p>checkout a branch:
+<pre><code>
+git checkout name-of-branch
+</pre></code>
+<p>checkout a branch and create it at the same time:</p>
+<pre><code>
+git checkout -b name-of-branch
+</pre></code>
+restore working directory to last commit:
+<pre><code>
+git checkout HEAD
+</code></pre>
+<p>
+Update all files in working directory to match the specified commit:
+</p>
+<pre><code>
+git checkout specified-commit
+</code></pre>
+<p>access an older version of a single file:</p>
+<pre><code>
+git checkout specified-commit filename
+</code></pre>
+<p>display working branch:</p>
+<pre><code>
+git branch
+</code></pre>
+<p>create new branch</p>
+<pre><code>
+git branch branch-name
+</pre></code>
+<p>delete branch</p>
+<pre><code>
+git branch -d branch-name
+</code></pre>
+<p class="bolder"><a name="add"></a>add, commit, diff</p>
+<p>add a file to staging area:</p>
+<pre><code>
+git add file-name
+</code></pre>
+<p>add everything in directory:</p>
+<pre><code>
+git add .
+</code></pre>
+<p>Begin an interactive staging session that lets you choose portions of a file to add to the next commit. This will present you with a chunk of changes and prompt you for a command. Use y to stage the chunk, n to ignore the chunk, s to split it into smaller chunks, e to manually edit the chunk, and q to exit.</p>
+<pre><code>
+git add -p
+</pre></code>
+<p>permanently store changes from the staging area inside the repo with message</p>
+<pre><code>
+git commit -m "Your message"
+</pre></code>
+<p>show the differences between the version you're working on and the one in the staging area:(press q to exit diff mode)</p>
+<pre><code>
+git diff file-name
+</code></pre>
+<p class="bolder"><a name="clone"></a>clone, init</p>
+<p>retrieve a complete replica of a remote repo:</p>
+<pre><code>
+git clone remote-location clone-name
+</code></pre>
+<p>transform the current directory into a git repo</p>
+<pre><code>
+git init
+</code></pre>
+<p>create a new folder containing only the git subdirectory:</p>
+<pre><code>
+git init directory-name
+</pre></code>
+<p>initialize a git repo but ommit the working directory:</p>
+<pre><code>
+git init --bare directory-name
+</code></pre>
+<p class="bolder"><a name="status"></a>status, log</p>
+<p>show status of working directory and staging area:</p>
+<pre><code>
+git status
+</code></pre>
+<p>show a list of all previous commits.SHAs are the 40 character codes that serve as IDs for each commit.</p>
+<pre><code>
+git log
+</code></pre>
+<p>condesnse each commit to a single line:</p>
+<pre><code>
+git log --oneline
+</code></pre>
+<p>Along with normal info, show which files were altered and relative number of lines added or deleted:</p>
+<pre><code>
+git log --stat
+</code></pre>
+<p>searches for commits with a commit message that matches pattern which can be a string or regex:</p>
+<pre><code>
+git log --grep="pattern"
+</code></pre>
+<p>only display commits that include specified file: </p>
+<pre><code>
+git log file-name
+</code></pre>
+<p class="bolder"><a name="head"></a>HEAD</p>
+<p>In Git, the SHA of the commit you are currently on is known as the HEAD commit. In many cases, the most recently made commit is the HEAD commit. HEAD is the commit you are currently on, HEAD^ is the last commit, HEAD~3, HEAD~4, HEAD~5, are the 3rd 4th and 5th commit from HEAD respectively.
+To see the HEAD commit, enter:</p>
+<pre><code>
+git show HEAD
+</code></pre>
+<p>discard changes made for a file and return to HEAD commit:</p>
+<pre><code>
+git checkout HEAD file-name
+</code></pre>
+<p>Unstage file changes in the staging area:</p>
+<pre><code>
+git reset HEAD
+</code></pre>
+<p class="bolder"><a name="reset"></a>reset</p>
+<p>rewind to a previous commit using the first 7 characters of the SHA of the commit or using HEAD:</p>
+<pre><code>
+git reset commit-SHA
+git reset HEAD
+</code></pre>
+<p>remove file from staging area but leave working directory unchanged:</p>
+<pre><code>
+git reset file-name
+</code></pre>
+<p class="bolder"><a name="remote"></a>remote, fetch, push, merge</p>
+<p>A remote is a shared Git repository that allows multiple collaborators to work on the same Git project from different locations. Collaborators work on the project independently, and merge changes together when they are ready to do so.
+</p>
+<p>List the remote repos:</p>
+<pre><code>
+git remote -v
+</code></pre>
+<p>push your branch to the remote origin:</p>
+<pre><code>
+git push origin your-branch-name
+</code></pre>
+<p>Fetch a branch from the remote into the local copy:</p>
+<pre><code>
+git fetch remote branch-name
+</code></pre>
+<p>git merge branch-name</p>
+<pre><code>
+git merge branch-name
+</code></pre>
+<p>fetch the remote's copy and immediately merge it:</p>
+<pre><code>
+git pull remote branch-name
+</code></pre>
+<p class="bolder"><a name="summary"></a>summarized basic workflow</p>
+<p>Here's what a workday is generally like:</p>
+<pre><code>
+git checkout -b branch-name
+</code></pre>
+<p>do some work on some files</p>
+<pre><code>
+git add whatever-needs-to-be-added
+git commit -m "Message about what was done"
+git push origin branch-name
+</pre></code>
+<p>In github, merge in branch. Delete branch, once successful.</p>
+<pre><code>
+git checkout master
+git fetch origin master
+git merge origin/master
+git branch -d branch-name
+</code></pre>
+
+</main>
+  <footer>
+    <p>contact: <a href="mailto:stevenking86@gmail.com?Subject=Hello%20from%20your%20website" target="_top">stevenking86@gmail.com</a></p>
+  </footer>
+
+
+</body>
+
+</html>

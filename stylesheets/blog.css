@@ -32,7 +32,6 @@ header {
   position: relative;
   margin-top: 4em;
   text-align: center;
-  border-bottom: 1px solid black;
   margin-bottom: 2em;
 }
 
@@ -47,6 +46,9 @@ header h2 {
 
 #index-info {
   text-align: center;
+  width: 90%;
+  margin-right: auto;
+  margin-left: 3em;
 }
 
 footer {

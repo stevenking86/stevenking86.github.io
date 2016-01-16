@@ -35,7 +35,7 @@ nav a:hover{
 nav li {
   list-style: none;
   display:inline-block;
-  margin-right:4em;
+  margin-right:6em;
   padding: 3px 5px 3px 5px;
   border: 2px solid black;
   border-radius: 10px;

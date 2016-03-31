@@ -9,7 +9,7 @@ h1 {
 
 #everything {
   position: relative;
-  top: 6em;
+  top: 4em;
 }
 
 #intro {
@@ -27,6 +27,24 @@ h1 {
   text-align: center;
 }
 
-#linked {
+.link_space {
   margin-left: 1em;
+}
+
+#toggle {
+  font-family: 'Poiret One', cursive;
+  color: red;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#tv_img {
+  height: 37px;
+  width: 37px;
+}
+
+#hoops_img {
+  height: 37px;
+  width: 37px;
 }

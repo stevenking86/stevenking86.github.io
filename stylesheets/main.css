@@ -1,0 +1,50 @@
+h1 {
+  color: blue;
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Poiret One', cursive;
+  /*font-family: 'Playfair Display', serif;*/
+  /*font-family: 'Josefin Sans', sans-serif;*/
+}
+
+#everything {
+  position: relative;
+  top: 4em;
+}
+
+#intro {
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Amatic SC', cursive;
+}
+
+#name {
+  color: red;
+  font-size: 1.2em;
+}
+
+#image_links {
+  text-align: center;
+}
+
+.link_space {
+  margin-left: 1em;
+}
+
+#toggle {
+  font-family: 'Poiret One', cursive;
+  color: red;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#tv_img {
+  height: 37px;
+  width: 37px;
+}
+
+#hoops_img {
+  height: 37px;
+  width: 37px;
+}

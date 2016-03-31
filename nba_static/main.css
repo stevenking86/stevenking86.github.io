@@ -1,0 +1,70 @@
+#player_info {
+    color: white;
+}
+
+ #points_container {
+  width:40%;
+  height:20%;
+  display:inline-block;
+ }
+
+#additional_stats {
+  position: relative;
+  display: inline-block;
+  bottom: 10em;
+  left: 4em;
+  background: rgba(192,192,192,.25);
+  padding-left: 2em;
+  padding-right: 2em;
+
+}
+
+p {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+h2 {
+  text-align: center
+}
+
+#player_name {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#player_image {
+  display:inline-block;
+  position: relative;
+  bottom: 10em;
+  left: 8em;
+  border: 2px solid white;
+}
+
+#disclaimer {
+  font-size: .9em;
+  color: white;
+}
+
+body {
+  background-image: url("Basketball-Court_Landscape.jpg");
+}
+
+#bottom_text {
+  margin: auto;
+  width: 80%;
+  background: rgba(192,192,192,.45);
+}
+
+a {
+  color: grey;
+}

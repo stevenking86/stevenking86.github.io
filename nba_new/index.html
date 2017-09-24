@@ -12,19 +12,28 @@
 
   <script>
     function getTeamData() {
-      console.log('here')
-      $.ajax({
-        url: "http://api.sportradar.us/nba-t3/seasontd/2016/REG/teams/583ecd4f-fb46-11e1-82cb-f4ce4684ea4c/statistics.json?api_key=nuwvmd46rmgya3ft7jyvgwkq",
-        type: 'GET',
-        crossDomain: true,
-        success:function(response){
-          console.log(response);
-        }
-      })
-        .done(function( data ) {
-          console.log('done')
-          console.log(data);
-        });
+
+    //   $.ajax({
+    //     url: "http://api.sportradar.us/nba-t3/seasontd/2016/REG/teams/583ecd4f-fb46-11e1-82cb-f4ce4684ea4c/statistics.json?api_key=nuwvmd46rmgya3ft7jyvgwkq",
+    //     type: 'GET',
+    //     success:function(response){
+    //       console.log(response);
+    //     }
+    //   })
+    //     .done(function( data ) {
+    //       console.log('done')
+    //       console.log(data);
+    //     });
+    // }
+
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      var url = "http://api.sportradar.us/nba-t3/seasontd/2016/REG/teams/583ecd4f-fb46-11e1-82cb-f4ce4684ea4c/statistics.xml?api_key=nuwvmd46rmgya3ft7jyvgwkq"
+      xmlHttp.open("GET", url , true); // true for asynchronous
+      xmlHttp.send(null);
     }
   </script>
 </html>
